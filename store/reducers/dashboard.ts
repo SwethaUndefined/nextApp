@@ -10,10 +10,8 @@ import {
   GET_TICKET_LIST_API,
   GET_TODAY_MEETING_DETAILS_API,
   GET_UPCOMINGS_API,
-  INVENTORY_ASSETS_API,
   LOGIN_API,
   LOGOUT_API,
-  NOTIFICATIONS_API,
   USER_ACCOUNT_MANAGEMENT_ACCOUNT_API,
 } from "@/utils/API";
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
@@ -96,6 +94,7 @@ export const userlogin = createAsyncThunkHandler(
       ACCESS_TOKEN,
       JSON.stringify({ access_token, user_email, user_id, refresh_token })
     );
+    window.location.href = "/"
   }
 );
 
@@ -111,15 +110,15 @@ export const userAccountManagementAccount = createAsyncThunkHandler(
   "user_account_management"
 );
 
-export const inventoryAssets = createAsyncThunkHandler(
-  INVENTORY_ASSETS_API,
-  "inventory_Assets"
-);
+// export const inventoryAssets = createAsyncThunkHandler(
+//   INVENTORY_ASSETS_API,
+//   "inventory_Assets"
+// );
 
-export const getNotifications = createAsyncThunkHandler(
-  NOTIFICATIONS_API,
-  "notification_list"
-);
+// export const getNotifications = createAsyncThunkHandler(
+//   NOTIFICATIONS_API,
+//   "notification_list"
+// );
 const dashboardSlice = createSlice({
   name: "dashboard",
   initialState: {

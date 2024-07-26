@@ -10,7 +10,7 @@ const Middleware = (req) => {
 
   if (pathName.toLowerCase() === "/login") {
     if (cookieData && cookieData?.value) {
-      return NextResponse.redirect("http://localhost:3000");
+      return NextResponse.redirect("http://localhost:3000/");
     }
   }
 
@@ -18,6 +18,7 @@ const Middleware = (req) => {
     pathName.toLowerCase().includes("dashboardx") ||
     pathName.toLowerCase() == "/"
   ) {
+    console.log(cookieData,"cookieData")
     if (cookieData && cookieData?.value) {
       const decoded = jwtDecode(cookieData?.value);
       let beginningTime = moment(Date.now()).format("DD-MM-YYYY hh:mm:ss");

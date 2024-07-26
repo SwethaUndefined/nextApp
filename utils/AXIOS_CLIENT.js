@@ -12,9 +12,9 @@ export const AXIOS_CLIENT = axios.create({
 
 AXIOS_CLIENT.interceptors.request.use(
   (config) => {
-    const token = "asdf";
+    // const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIyMDEyNDI5LCJpYXQiOjE3MjE5MjYwMjksImp0aSI6ImIzN2E4MzVmZDY0ZjQ2NGFhYjFjMWFlZDk4NjY2YzBlIiwidXNlcl9pZCI6MTV9.yS6LhlAnKHGchUg45RRNs_7re_7MVglw3aHGAV-gTXc";
     if (token) {
-      config.headers["Authorization"] = "Bearer " + token;
+      config.headers["Authorization"] = "Bearer " ;
     }
     return config;
   },

@@ -24,7 +24,7 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Loader from "@/app/dashboard/common/Loader";
 import { dashboardSelector, userlogin, getActivities, getHirings, getInterviewAndHiredDetails, getPostedJobList, getTodayMeetingDetailsList, getUpcomings, getPostedJobActiveList } from "@/store/reducers/dashboard";
-import { P_M_JOB_DESCRIPTIONS1, P_M_JOB_DESCRIPTIONS4 } from "@/constants/ROUTES";
+// import { P_M_JOB_DESCRIPTIONS1, P_M_JOB_DESCRIPTIONS4 } from "@/constants/ROUTES";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -100,7 +100,6 @@ export default function Home() {
   const activeJobsData = dashboardData?.posted_job_list
   const inactiveJobsData = dashboardData?.posted_job_active_list
 
-  //tab end
   return (
     <main className="">
       <section className="container-fluid my-md-5 my-4">
@@ -120,20 +119,20 @@ export default function Home() {
               </div>
 
               <div className="col-lg-4 mt-3 mt-lg-0 text-center text-lg-end">
-                <Link
+                {/* <Link
                   prefetch
-                  href={P_M_JOB_DESCRIPTIONS1}
+                  href={`${P_M_JOB_DESCRIPTIONS1}`}
                   className="btn btn-light me-3 mx-lg-2"
                 >
                   JD Assets
-                </Link>
-                <Link
+                </Link> */}
+                {/* <Link
                   prefetch
-                  href={P_M_JOB_DESCRIPTIONS4}
+                  href={`${P_M_JOB_DESCRIPTIONS4 }`}
                   className="btn btn-blue bg-[#0a66c2!important]"
                 >
                   Create New JD
-                </Link>
+                </Link> */}
               </div>
             </div>
 
@@ -220,14 +219,14 @@ export default function Home() {
                       </Tabs>
                     </Box>
                     <hr className="mt-0" />
-                    <CustomTabPanel className="p-0" value={value} index={0}>
+                    {/* <CustomTabPanel className="p-0" value={value} index={0}>
                       <div className="row px-3 pb-3">
                         {inactiveJobsData?.map((job: any, index: any) => (
                           <PostedJobsCard key={index} {...job} />
                         ))}
                       </div>
-                    </CustomTabPanel>
-                    <CustomTabPanel
+                    </CustomTabPanel> */}
+                    {/* <CustomTabPanel
                       className="p-0 bg-dark"
                       value={value}
                       index={1}
@@ -237,7 +236,7 @@ export default function Home() {
                           <PostedJobsCard key={index} {...job} />
                         ))}
                       </div>
-                    </CustomTabPanel>
+                    </CustomTabPanel> */}
                   </Box>
                 </div>
 
