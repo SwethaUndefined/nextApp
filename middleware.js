@@ -10,7 +10,7 @@ const Middleware = (req) => {
 
   if (pathName.toLowerCase() === "/login") {
     if (cookieData && cookieData?.value) {
-      return NextResponse.redirect("http://localhost:3000/");
+      return NextResponse.redirect("http://localhost:3000/dashboardx/P_M_todo0");
     }
   }
 

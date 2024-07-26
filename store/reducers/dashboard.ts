@@ -11,6 +11,7 @@ import {
   GET_TODAY_MEETING_DETAILS_API,
   GET_UPCOMINGS_API,
   LOGIN_API,
+  NOTIFICATIONS_API,
   LOGOUT_API,
   USER_ACCOUNT_MANAGEMENT_ACCOUNT_API,
 } from "@/utils/API";
@@ -103,7 +104,7 @@ export const getTicketList = createAsyncThunkHandler(
   "ticket_List"
 );
 
-export const userLogout = createAsyncThunkHandler(LOGOUT_API, "logout");
+// export const userLogout = createAsyncThunkHandler(LOGOUT_API, "logout");
 
 export const userAccountManagementAccount = createAsyncThunkHandler(
   USER_ACCOUNT_MANAGEMENT_ACCOUNT_API,
@@ -115,10 +116,10 @@ export const userAccountManagementAccount = createAsyncThunkHandler(
 //   "inventory_Assets"
 // );
 
-// export const getNotifications = createAsyncThunkHandler(
-//   NOTIFICATIONS_API,
-//   "notification_list"
-// );
+export const getNotifications = createAsyncThunkHandler(
+  NOTIFICATIONS_API,
+  "notification_list"
+);
 const dashboardSlice = createSlice({
   name: "dashboard",
   initialState: {
